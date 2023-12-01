@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Language App</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form id="difficulty">
+            <label class="form-control">
+                <input type="radio" name="difficulty" value="beginner" checked/>
+                Beginner
+              </label>
+            
+              <label class="form-control">
+                <input type="radio" name="difficulty" value="intermediate"/>
+                Intermediate
+              </label>
+              <label class="form-control">
+                <input type="radio" name="difficulty" value="advanced"/>
+                Advanced
+              </label>
+        </form>
+        <div id="card">
+            <h4></h4>
+            <p></p>
+        </div>
+        <input type="text" id="translationInput" placeholder="Enter translation">
+        <button id="checkButton" style="--c:#7952b3">Start!</button>
+        <div id="progress">Word <span id="currentStep">1</span> of 10</div>
+        <div id="score">Correct: <span id="correctCount">0</span> | Incorrect: <span id="incorrectCount">0</span></div>
+    </div>
+      
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p><span id="proficiencyLevel"></span></p>
+        </div>
+    </div>
+      
+</body>
+</html>
