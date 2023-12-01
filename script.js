@@ -1,4 +1,5 @@
   $("#checkButton").click(async function () {
+    $("#checkButton").prop("disabled", true);
     $("#translationInput").prop("disabled", true);
     checkAnswer();
     $("#translationInput").text = '';
@@ -143,6 +144,7 @@ async function translateFetchedWord(word) {
     console.log(`Переклад: ${response.data.google ? response.data.google.text : response.data[0].text}` );
     wordTranslation = response.data.google ? response.data.google.text  : response.data[0].text ;
   $("#translationInput").prop("disabled", false);
+  $("#checkButton").prop("disabled", false);
 
   })
   .catch((error) => {
